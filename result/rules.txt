@@ -1,8 +1,10 @@
 Apriori
 
 Parameter specification:
- confidence minval smax arem  aval originalSupport maxtime support minlen maxlen target   ext
-        0.9    0.1    1 none FALSE            TRUE       5   0.006      1     10  rules FALSE
+ confidence minval smax arem  aval originalSupport maxtime support minlen maxlen target
+        0.9    0.1    1 none FALSE            TRUE       5   0.006      1     10  rules
+   ext
+ FALSE
 
 Algorithmic control:
  filter tree heap memopt load sort verbose
@@ -11,10 +13,10 @@ Algorithmic control:
 Absolute minimum support count: 245 
 
 set item appearances ...[0 item(s)] done [0.00s].
-set transactions ...[5424 item(s), 40880 transaction(s)] done [0.62s].
-sorting and recoding items ... [1231 item(s)] done [0.03s].
+set transactions ...[5424 item(s), 40880 transaction(s)] done [0.43s].
+sorting and recoding items ... [1231 item(s)] done [0.02s].
 creating transaction tree ... done [0.04s].
-checking subsets of size 1 2 3 4 5 done [0.24s].
+checking subsets of size 1 2 3 4 5 done [0.25s].
 writing ... [17 rule(s)] done [0.01s].
 creating S4 object  ... done [0.03s].
 set of 17 rules

@@ -16,6 +16,7 @@ itemFrequencyPlot(basket_data,topN=20,type="relative",col=brewer.pal(8,'Pastel2'
 sink("rules.txt")
 rules <- apriori(basket_data, parameter = list(supp=0.006, conf=0.9, 
                                                target = "rules"))
+
 #Summary
 summary(rules)
 inspect(rules)
@@ -70,6 +71,7 @@ plot(rules)
 plot(rules,method="graph",interactive=TRUE,shading=NA)
 plot(rules,method="two-key plot")
 plotly_arules(rules)
+plotly_arules(max_len_rules)
 plot(rules, method = "graph",  engine = "htmlwidget")
 plot(rules, method="paracoord")
 
