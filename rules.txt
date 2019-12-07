@@ -1,0 +1,81 @@
+Apriori
+
+Parameter specification:
+ confidence minval smax arem  aval originalSupport maxtime support minlen maxlen target   ext
+        0.9    0.1    1 none FALSE            TRUE       5   0.006      1     10  rules FALSE
+
+Algorithmic control:
+ filter tree heap memopt load sort verbose
+    0.1 TRUE TRUE  FALSE TRUE    2    TRUE
+
+Absolute minimum support count: 245 
+
+set item appearances ...[0 item(s)] done [0.00s].
+set transactions ...[5424 item(s), 40880 transaction(s)] done [0.62s].
+sorting and recoding items ... [1231 item(s)] done [0.03s].
+creating transaction tree ... done [0.04s].
+checking subsets of size 1 2 3 4 5 done [0.24s].
+writing ... [17 rule(s)] done [0.01s].
+creating S4 object  ... done [0.03s].
+set of 17 rules
+
+rule length distribution (lhs + rhs):sizes
+2 3 4 
+1 9 7 
+
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  2.000   3.000   3.000   3.353   4.000   4.000 
+
+summary of quality measures:
+    support           confidence          lift            count      
+ Min.   :0.006238   Min.   :0.9020   Min.   : 27.49   Min.   :255.0  
+ 1st Qu.:0.006923   1st Qu.:0.9103   1st Qu.: 45.11   1st Qu.:283.0  
+ Median :0.007387   Median :0.9173   Median : 52.45   Median :302.0  
+ Mean   :0.008088   Mean   :0.9202   Mean   : 56.35   Mean   :330.6  
+ 3rd Qu.:0.007877   3rd Qu.:0.9264   3rd Qu.: 66.63   3rd Qu.:322.0  
+ Max.   :0.017784   Max.   :0.9480   Max.   :101.71   Max.   :727.0  
+
+mining info:
+        data ntransactions support confidence
+ basket_data         40880   0.006        0.9
+     lhs                                  rhs                                   support confidence      lift count
+[1]  {REGENCY TEA PLATE PINK}          => {REGENCY TEA PLATE GREEN}         0.006800391  0.9114754  97.79820   278
+[2]  {REGENCY TEA PLATE GREEN,                                                                                    
+      REGENCY TEA PLATE PINK}          => {REGENCY TEA PLATE ROSES}         0.006237769  0.9172662  84.26481   255
+[3]  {REGENCY TEA PLATE PINK,                                                                                     
+      REGENCY TEA PLATE ROSES}         => {REGENCY TEA PLATE GREEN}         0.006237769  0.9479554 101.71238   255
+[4]  {POPPY'S PLAYHOUSE BATHROOM,                                                                                 
+      POPPY'S PLAYHOUSE LIVINGROOM}    => {POPPY'S PLAYHOUSE KITCHEN}       0.007974560  0.9261364  51.02487   326
+[5]  {POPPY'S PLAYHOUSE BATHROOM,                                                                                 
+      POPPY'S PLAYHOUSE KITCHEN}       => {POPPY'S PLAYHOUSE LIVINGROOM}    0.007974560  0.9131653  66.18829   326
+[6]  {POPPY'S PLAYHOUSE BATHROOM,                                                                                 
+      POPPY'S PLAYHOUSE LIVINGROOM}    => {POPPY'S PLAYHOUSE BEDROOM}       0.007803327  0.9062500  52.69915   319
+[7]  {POPPY'S PLAYHOUSE BATHROOM,                                                                                 
+      POPPY'S PLAYHOUSE BEDROOM}       => {POPPY'S PLAYHOUSE LIVINGROOM}    0.007803327  0.9193084  66.63356   319
+[8]  {POPPY'S PLAYHOUSE BATHROOM,                                                                                 
+      POPPY'S PLAYHOUSE KITCHEN}       => {POPPY'S PLAYHOUSE BEDROOM}       0.007876712  0.9019608  52.44973   322
+[9]  {POPPY'S PLAYHOUSE BATHROOM,                                                                                 
+      POPPY'S PLAYHOUSE BEDROOM}       => {POPPY'S PLAYHOUSE KITCHEN}       0.007876712  0.9279539  51.12501   322
+[10] {PINK REGENCY TEACUP AND SAUCER,                                                                             
+      ROSES REGENCY TEACUP AND SAUCER} => {GREEN REGENCY TEACUP AND SAUCER} 0.017783757  0.9031056  27.48992   727
+[11] {POPPY'S PLAYHOUSE BATHROOM,                                                                                 
+      POPPY'S PLAYHOUSE KITCHEN,                                                                                  
+      POPPY'S PLAYHOUSE LIVINGROOM}    => {POPPY'S PLAYHOUSE BEDROOM}       0.007387476  0.9263804  53.86974   302
+[12] {POPPY'S PLAYHOUSE BATHROOM,                                                                                 
+      POPPY'S PLAYHOUSE BEDROOM,                                                                                  
+      POPPY'S PLAYHOUSE LIVINGROOM}    => {POPPY'S PLAYHOUSE KITCHEN}       0.007387476  0.9467085  52.15828   302
+[13] {POPPY'S PLAYHOUSE BATHROOM,                                                                                 
+      POPPY'S PLAYHOUSE BEDROOM,                                                                                  
+      POPPY'S PLAYHOUSE KITCHEN}       => {POPPY'S PLAYHOUSE LIVINGROOM}    0.007387476  0.9378882  67.98027   302
+[14] {BLUE SPOT CERAMIC DRAWER KNOB,                                                                              
+      BLUE STRIPE CERAMIC DRAWER KNOB,                                                                            
+      RED SPOT CERAMIC DRAWER KNOB}    => {RED STRIPE CERAMIC DRAWER KNOB}  0.006457926  0.9103448  45.10897   264
+[15] {PINK REGENCY TEACUP AND SAUCER,                                                                             
+      REGENCY CAKESTAND 3 TIER,                                                                                   
+      ROSES REGENCY TEACUP AND SAUCER} => {GREEN REGENCY TEACUP AND SAUCER} 0.010396282  0.9159483  27.88084   425
+[16] {CHARLOTTE BAG PINK POLKADOT,                                                                                
+      CHARLOTTE BAG SUKI DESIGN,                                                                                  
+      STRAWBERRY CHARLOTTE BAG}        => {RED RETROSPOT CHARLOTTE BAG}     0.007191781  0.9102167  29.57843   294
+[17] {CHARLOTTE BAG PINK POLKADOT,                                                                                
+      STRAWBERRY CHARLOTTE BAG,                                                                                   
+      WOODLAND CHARLOTTE BAG}          => {RED RETROSPOT CHARLOTTE BAG}     0.006922701  0.9218241  29.95562   283

@@ -13,12 +13,13 @@ itemFrequencyPlot(basket_data,topN=20,type="absolute",col=brewer.pal(8,'Pastel2'
 itemFrequencyPlot(basket_data,topN=20,type="relative",col=brewer.pal(8,'Pastel2'), main="Absolute Item Frequency Plot")
 
 #Get the rules
+sink("rules.txt")
 rules <- apriori(basket_data, parameter = list(supp=0.006, conf=0.9, 
                                                target = "rules"))
-
 #Summary
 summary(rules)
 inspect(rules)
+sink()
 
 #Sort Rules by confidence
 confidence_rules<-sort(rules, by="confidence", decreasing=TRUE)
@@ -33,9 +34,11 @@ lift_rules<-sort(rules, by="lift", decreasing=TRUE)
 inspect(lift_rules)
 
 #Getting the rules ny setting maxlen parameter
+sink("max_len_rules.txt")
 max_len_rules <- apriori(basket_data, parameter = list(supp = 0.006, conf = 0.9,maxlen=3))
 summary(max_len_rules)
 inspect(max_len_rules)
+sink()
 
 #Inspect the redudant rules
 inspect(rules[is.redundant(rules)])
@@ -45,18 +48,22 @@ inspect(rules[!is.redundant(rules)])
 
 #Targeting Items
 #RHS
+sink("target_rhs_rules.txt")
 target_rhs_rules<-apriori(data=basket_data, parameter=list(supp=0.006,conf = 0.9), 
                appearance = list(default="lhs",rhs="POPPY'S PLAYHOUSE BEDROOM"),
                control = list(verbose=F))
-target_rhs_rules<-sort(target_rhs_rules, decreasing=TRUE,by="confidence")
+summary(target_rhs_rules)
 inspect(target_rhs_rules)
+sink()
 
 #LHS
+sink("target_lhs_rules.txt")
 target_lhs_rules<-apriori(data=basket_data, parameter=list(supp=0.006,conf = 0.6), 
                appearance = list(default="rhs",lhs="POPPY'S PLAYHOUSE BEDROOM"),
                control = list(verbose=F))
-target_lhs_rules<-sort(target_lhs_rules, decreasing=TRUE,by="confidence")
+summary(target_lhs_rules)
 inspect(target_lhs_rules)
+sink()
 
 #Visualization
 plot(rules)

@@ -1,0 +1,27 @@
+set of 2 rules
+
+rule length distribution (lhs + rhs):sizes
+2 
+2 
+
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+      2       2       2       2       2       2 
+
+summary of quality measures:
+    support          confidence          lift           count    
+ Min.   :0.01128   Min.   :0.6558   Min.   :43.65   Min.   :461  
+ 1st Qu.:0.01186   1st Qu.:0.6899   1st Qu.:44.62   1st Qu.:485  
+ Median :0.01245   Median :0.7240   Median :45.59   Median :509  
+ Mean   :0.01245   Mean   :0.7240   Mean   :45.59   Mean   :509  
+ 3rd Qu.:0.01304   3rd Qu.:0.7582   3rd Qu.:46.56   3rd Qu.:533  
+ Max.   :0.01363   Max.   :0.7923   Max.   :47.53   Max.   :557  
+
+mining info:
+        data ntransactions support confidence
+ basket_data         40880   0.006        0.6
+    lhs                            rhs                            support    confidence
+[1] {POPPY'S PLAYHOUSE BEDROOM} => {POPPY'S PLAYHOUSE LIVINGROOM} 0.01127691 0.6557610 
+[2] {POPPY'S PLAYHOUSE BEDROOM} => {POPPY'S PLAYHOUSE KITCHEN}    0.01362524 0.7923186 
+    lift     count
+[1] 47.53105 461  
+[2] 43.65227 557  
